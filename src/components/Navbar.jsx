@@ -9,9 +9,25 @@ export default function Navbar() {
                 Home
                 </Link>
             </div>
-            <div className = "nav-right">
-                <Link to="/calculator" className="home-button-nav">
+            <div className = "nav-middle">
+                <Link to="/calculator" className="calc-button-nav">
                 Calculator
+                </Link>
+                <Link to="/tracker" className="tracker-button-nav">
+                Tracker
+                </Link>
+                <Link to="/products" className="products-button-nav">
+                Products
+                </Link>
+                <Link to="/schedule" className="schedule-button-nav">
+                Schedule
+                </Link>
+
+            </div>
+
+            <div className = "nav-right">
+                <Link to ="/settings" className="settings-button-nav">
+                Settings
                 </Link>
             </div>
         </div>

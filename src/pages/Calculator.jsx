@@ -37,6 +37,7 @@ function Calculator(){
 
         const dietCarbon = 2000 * dietMultiplier;
         const monthlyCarbon = electricityCarbon + gasCarbon + drivingCarbon + (flightCarbon / 12) + (dietCarbon / 12);
+        const annualCarbon = monthlyCarbon * 12;
         
         setResults({
             electricityCarbon,
@@ -45,7 +46,8 @@ function Calculator(){
             flightCarbon: flightCarbon / 12,
             dietCarbon,
             monthlyCarbon,
-            annualCarbon: monthlyCarbon * 12
+            annualCarbon,
+            poundsCarbon: annualCarbon / 2000
         });
     };
 
@@ -121,6 +123,7 @@ function Calculator(){
 
             <div>
                 <h3>Monthly Carbon Footprint Results (lbs CO2):</h3>
+                <span>{results.poundsCarbon} tons CO2</span>
                 <p>Electricity: {results.electricityCarbon}</p>
                 <p>Gas: {results.gasCarbon}</p>
                 <p>Driving: {results.drivingCarbon}</p>

@@ -6,10 +6,13 @@ export default function Navbar() {
         <div className = "navbar">
             <div className = "nav-left">
                 <Link to="/" className="home-button-nav">
-                Home
+                Rolsa Technologies
                 </Link>
             </div>
             <div className = "nav-middle">
+                <Link to="/" className="home-button-nav">
+                Home
+                </Link>
                 <Link to="/calculator" className="calc-button-nav">
                 Calculator
                 </Link>

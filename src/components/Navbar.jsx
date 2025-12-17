@@ -22,8 +22,8 @@ export default function Navbar() {
                 <Link to="/products" className="products-button-nav">
                 Products
                 </Link>
-                <Link to="/schedule" className="schedule-button-nav">
-                Schedule
+                <Link to="/booking" className="Booking-button-nav">
+                Booking
                 </Link>
 
             </div>

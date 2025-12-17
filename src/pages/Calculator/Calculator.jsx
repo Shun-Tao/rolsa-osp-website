@@ -54,6 +54,18 @@ function Calculator(){
     return(
         <>
             <Navbar/>
+            <div className = "hero-section">
+                <h1 className = "hero-title">
+                    <span className = "highlighted-text">Carbon Footprint Calculator</span>
+                </h1>
+                <p className = "hero-text">
+                    Calculate your carbon footprint based on your daily activities.
+                </p>
+            </div>
+
+
+
+
             <div>Calculator page</div>
 
             <label htmlFor="electricity">Monthly Electricity Usage:</label>

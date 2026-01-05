@@ -1,12 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css'
-import Home from "./pages/Home.jsx"
-import Calculator from "./pages/Calculator.jsx"
-import Tracker from "./pages/Tracker.jsx"
-import Products from "./pages/Products.jsx"
-import Booking from "./pages/Booking.jsx"
-import Settings from "./pages/Settings.jsx"
-import Profile from "./pages/Profile.jsx"
+import Home from "./pages/Home/Home.jsx"
+import Calculator from "./pages/Calculator/Calculator.jsx"
+import Tracker from "./pages/Tracker/Tracker.jsx"
+import Products from "./pages/Products/Products.jsx"
+import Booking from "./pages/Booking/Booking.jsx"
+import Settings from "./pages/Settings/Settings.jsx"
+import Profile from "./pages/Profile/Profile.jsx"
 
 
 function App() {

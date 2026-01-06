@@ -4,6 +4,7 @@ import imgImage1 from "../assets/Wind_Energy.png";
 import imgImage2 from "../assets/EV.png";
 // Image constants from Figma
 
+
 const imgImage4 = "https://www.figma.com/api/mcp/asset/77a55acf-34d2-4238-a6b9-dd9b87a9afc9";
 const imgRectangle4 = "https://www.figma.com/api/mcp/asset/6d4a0a2e-50a7-41b6-ae54-e7a7ffa9a7fb";
 const imgRectangle8 = "https://www.figma.com/api/mcp/asset/edb8a7c7-acbe-4afe-ae5f-18c83f0caab3";

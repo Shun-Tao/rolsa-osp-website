@@ -1,0 +1,13 @@
+.horizontal {
+  display: flex;
+  height: 100vh;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+.panel {
+  min-width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+}

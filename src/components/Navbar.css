@@ -1,0 +1,30 @@
+.navbar {
+    background-color: rgb(205, 205, 205);
+    display: flex;
+    width: 100%;
+    border-radius: 35px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar div{
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: #D2f898;
+}
+
+
+.navbar .home-button-nav.active {
+    color: #D2f898;
+}

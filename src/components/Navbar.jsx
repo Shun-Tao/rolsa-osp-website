@@ -1,20 +1,29 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 export default function Navbar() {
     return (
         <div className = "navbar">
-            <div className = "nav-left">
-                <Link to="/" className="home-button-nav">
+            <div className = "nav-one">
+                <NavLink to="/" className="home-button-nav">
                 Home
-                </Link>
+                </NavLink>
             </div>
-            <div className = "nav-right">
-                <Link to="/calculator" className="home-button-nav">
+            <div className = "nav-two">
+                <NavLink to="/calculator" className="home-button-nav">
                 Calculator
-                </Link>
+                </NavLink>
+            </div>
+            <div className = "nav-three">
+                <NavLink to="/products" className="home-button-nav">
+                Products
+                </NavLink>
+            </div>
+            <div className = "nav-four">
+                <NavLink to="/energyTracker" className="home-button-nav">
+                Energy Tracker
+                </NavLink>
             </div>
         </div>
     );
 }
-

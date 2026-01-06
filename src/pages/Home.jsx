@@ -1,10 +1,10 @@
 import Navbar from '../components/Navbar.jsx';
 import './Home.css';
-
+import imgImage1 from "../assets/Wind_Energy.png";
+import imgImage2 from "../assets/EV.png";
 // Image constants from Figma
-const imgImage1 = "https://www.figma.com/api/mcp/asset/f8544b50-3277-47fa-bbbb-449274253c96";
+
 const imgImage4 = "https://www.figma.com/api/mcp/asset/77a55acf-34d2-4238-a6b9-dd9b87a9afc9";
-const imgImage2 = "https://www.figma.com/api/mcp/asset/2dee07b2-ce14-4957-9dcb-a14c3f4d21d7";
 const imgRectangle4 = "https://www.figma.com/api/mcp/asset/6d4a0a2e-50a7-41b6-ae54-e7a7ffa9a7fb";
 const imgRectangle8 = "https://www.figma.com/api/mcp/asset/edb8a7c7-acbe-4afe-ae5f-18c83f0caab3";
 const imgRectangle10 = "https://www.figma.com/api/mcp/asset/98c4eac4-72a3-402a-a762-af95907c8352";
@@ -16,9 +16,10 @@ function Home() {
     return (
         <>
             <div className = "background-page">
-                <Navbar />
+                
                 <div className="home-page">
                     {/* Hero Section */}
+                    <Navbar />
                     <div className="hero-wrapper">
                         <div className="hero-text">
                             <h1 className="hero-title">Achieve Your<br />Green Energy</h1>
@@ -136,6 +137,7 @@ function Home() {
                             <input type="email" placeholder="Your email address" className="email-field" />
                             <button className="submit-button">Submit</button>
                         </div>
+            
                     </div>
 
                     {/* Footer */}

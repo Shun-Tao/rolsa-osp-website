@@ -1,5 +1,5 @@
 .navbar {
-    background-color: rgb(205, 205, 205);
+    margin-top: 10px;
     display: flex;
     width: 100%;
     border-radius: 35px;
@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    position:sticky;
 }
 
 .navbar div{

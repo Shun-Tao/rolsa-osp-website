@@ -20,7 +20,7 @@ export default function Navbar() {
                 </NavLink>
             </div>
             <div className = "nav-four">
-                <NavLink to="/energyTracker" className="home-button-nav">
+                <NavLink to="/Tracker" className="home-button-nav">
                 Energy Tracker
                 </NavLink>
             </div>

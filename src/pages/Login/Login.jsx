@@ -1,11 +1,18 @@
-import Navbar from '../../components/Navbar.jsx';
+import Navbar from '../../components/Navbar/Navbar.jsx';
+import './Login.css';
 
 function Login(){
     return(
         <>
             <Navbar/>
-            <div>Login page</div>
-            
+            <div className="background-page">
+                <div className="login-page">
+                    <div className="login-form-inner">
+                    
+
+                    </div>
+                </div>
+            </div>
         </>
     )
 }

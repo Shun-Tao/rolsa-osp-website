@@ -1,4 +1,5 @@
-import Navbar from '../../components/Navbar.jsx';
+import Navbar from '../../components/Navbar/Navbar.jsx';
+import Footer from '../../components/Footer/Footer.jsx';
 import './Home.css';
 import imgImage1 from "../../assets/Wind_Energy.png";
 import imgImage2 from "../../assets/EV.png";
@@ -137,15 +138,10 @@ function Home() {
                             <input type="email" placeholder="Your email address" className="email-field" />
                             <button className="submit-button">Submit</button>
                         </div>
-            
                     </div>
-
-                    {/* Footer */}
-                    <footer className="footer-section">
-                        <p>©2025 Rolsa technologies Copyrights</p>
-                    </footer>
                 </div>
             </div>
+            <Footer/>
         </>
     );
 }

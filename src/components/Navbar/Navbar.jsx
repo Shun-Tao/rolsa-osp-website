@@ -20,8 +20,13 @@ export default function Navbar() {
                 </NavLink>
             </div>
             <div className = "nav-four">
-                <NavLink to="/Tracker" className="home-button-nav">
+                <NavLink to="/tracker" className="home-button-nav">
                 Energy Tracker
+                </NavLink>
+            </div>
+            <div className = "nav-five">
+                <NavLink to="/login" className="home-button-nav">
+                Login
                 </NavLink>
             </div>
         </div>

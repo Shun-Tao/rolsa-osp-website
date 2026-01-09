@@ -1,0 +1,142 @@
+.footer {
+    background-color: #ffffff;
+    color: #2f2f2f;
+    margin-top: auto;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.brand-logo {
+    background: linear-gradient(135deg, #A9CB75, #8fb85f);
+    padding: 8px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-text {
+    font-size: 20px;
+    color: white;
+}
+
+.brand-name {
+    font-size: 20px;
+    color: #1d1b20;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+
+.brand-description {
+    font-size: 14px;
+    color: #666666;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    color: #1d1b20;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.contact-icon {
+    color: #A9CB75;
+    font-size: 16px;
+}
+
+.contact-link {
+    color: #2f2f2f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.contact-link:hover {
+    color: #A9CB75;
+}
+
+.contact-text {
+    color: #2f2f2f;
+    font-family: 'Inter', sans-serif;
+}
+
+.links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-link {
+    color: #2f2f2f;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-link:hover {
+    color: #A9CB75;
+}
+
+.footer-bottom {
+    border-top: 1px solid #e5e5e5;
+    margin-top: 32px;
+    padding-top: 32px;
+    text-align: center;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #666666;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}

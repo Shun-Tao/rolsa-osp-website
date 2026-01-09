@@ -7,6 +7,7 @@ import Products from "./pages/Products/Products.jsx"
 import Booking from "./pages/Booking/Booking.jsx"
 import Settings from "./pages/Settings/Settings.jsx"
 import Profile from "./pages/Profile/Profile.jsx"
+import Login from "./pages/Login/Login.jsx"
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path= "/booking" element ={<Booking/>}/>
         <Route path= "/settings" element ={<Settings/>}/>
         <Route path= "/profile" element ={<Profile/>}/>
+        <Route path= "/login" element ={<Login/>}/>
     </Routes>
   )
 }

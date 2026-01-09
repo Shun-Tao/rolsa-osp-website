@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import Navbar from '../../components/Navbar.jsx';
+import Navbar from '../../components/Navbar/Navbar.jsx';
+import './Calculator.css';
 
 function Calculator(){
     const [formData, setFormData] = useState({
@@ -10,13 +11,8 @@ function Calculator(){
         diet: ''
     });
     
-    const [results, setResults] = useState({
-        electricityCarbon: 0,
-        gasCarbon: 0,
-        drivingCarbon: 0,
-        flightCarbon: 0,
-        monthlyCarbon: 0
-    });
+    const [results, setResults] = useState(null);
+    const [viewMode, setViewMode] = useState('monthly');
     
     function handleChange(event){
         setFormData({...formData, [event.target.name]: event.target.value});
@@ -53,99 +49,105 @@ function Calculator(){
 
     return(
         <>
-            <Navbar/>
-            <div className = "hero-section">
-                <h1 className = "hero-title">
-                    <span className = "highlighted-text">Carbon Footprint Calculator</span>
-                </h1>
-                <p className = "hero-text">
-                    Calculate your carbon footprint based on your daily activities.
-                </p>
+            <div className="background-page">
+                <div className="calculator-page">
+                    <Navbar/>
+                    <div className = "hero-section">
+                        <h1 className = "hero-title">
+                            <span className = "highlighted-text">Carbon Footprint Calculator</span>
+                        </h1>
+                        <p className = "hero-text">
+                            Calculate your carbon footprint based on your daily activities.
+                        </p>
+                    </div>
+
+
+                    <div className="form-section">
+                        <div className="form-inner">
+                        <label htmlFor="input-title">Monthly Electricity Usage (kWh):</label>
+                        <div className="input-form">
+                            <input
+                                type="text"
+                                placeholder="Enter a number"
+                                id="electricity"
+                                name="electricity"
+                                value={formData.electricity}
+                                onChange={handleChange}
+                            />
+                        </div>
+
+                        <label htmlFor="input-title">Monthly gas usage (Therms):</label>
+                        <div className="input-form">
+                            <input
+                                type="text"
+                                placeholder="Enter a number"
+                                id="gas"
+                                name="gas"
+                                value={formData.gas}
+                                onChange={handleChange}
+                            />
+                        </div>
+
+                        <label htmlFor="input-title">Miles driven per month:</label>
+                        <div className="input-form">
+                            <input
+                                type="text"
+                                placeholder="Enter a number"
+                                id="miles"
+                                name="miles"
+                                value={formData.miles}
+                                onChange={handleChange}
+                            />
+                        </div>
+
+                        <label htmlFor="input-title">Number of flights per year:</label>
+                        <div className="input-form">
+                            <input
+                                type="text"
+                                placeholder="Enter a number"
+                                id="flights"
+                                name="flights"
+                                value={formData.flights}
+                                onChange={handleChange}
+                            />
+                        </div>
+
+                        <label htmlFor="input-title">Meat consumption:</label>
+                        <select className = "input-form"
+                            id="diet"
+                            name="diet"
+                            value={formData.diet}
+                            onChange={handleChange}
+                            required
+                        >
+                            <option value="heavy">Heavy(Daily)</option>
+                            <option value="moderate">Moderate (A few times a week)</option>
+                            <option value="light">Light (Occasionally)</option>
+                            <option value="vegan">Vegetarian/Vegan</option>
+                        </select>
+
+                        <button onClick={calculateCarbon}>Calculate Carbon Footprint</button>
+                        </div>
+                    </div>
+
+                    {results && (
+                        <>
+                            <div className="results-section">
+                                <div className="results-inner">
+                                    <h2 className="result-title">Your Annual Carbon Footprint</h2>
+                                    <span className="carbon-total">{(results.annualCarbon / 2000).toFixed(1)} <span className="carbon-unit">Tons CO₂</span></span>
+                                    <p> {results.annualCarbon.toFixed(1)} lbs of CO₂ Per Year </p>
+                                    <footer className="results-footer">
+                                        <p> The average UK household produces about 13 tons of CO₂ a year.</p>
+                                    </footer>
+                                </div>
+                            </div>
+
+                            
+                        </>
+                    )}
+                </div>
             </div>
-
-
-
-
-            <div>Calculator page</div>
-
-            <label htmlFor="electricity">Monthly Electricity Usage:</label>
-            <div className="electricity-form">
-                <input
-                    type="text"
-                    placeholder="Enter a number"
-                    id="electricity"
-                    name="electricity"
-                    value={formData.electricity}
-                    onChange={handleChange}
-                />
-            </div>
-
-            <label htmlFor="gas">Monthly gas usage:</label>
-            <div className="gas-form">
-                <input
-                    type="text"
-                    placeholder="Enter a number"
-                    id="gas"
-                    name="gas"
-                    value={formData.gas}
-                    onChange={handleChange}
-                />
-            </div>
-
-            <label htmlFor="miles">Miles driven per month:</label>
-            <div className="miles-form">
-                <input
-                    type="text"
-                    placeholder="Enter a number"
-                    id="miles"
-                    name="miles"
-                    value={formData.miles}
-                    onChange={handleChange}
-                />
-            </div>
-
-            <label htmlFor="flights">Number of flights per year:</label>
-            <div className="flights-form">
-                <input
-                    type="text"
-                    placeholder="Enter a number"
-                    id="flights"
-                    name="flights"
-                    value={formData.flights}
-                    onChange={handleChange}
-                />
-            </div>
-
-            <label htmlFor="diet">Meat consumption:</label>
-            <select
-                id="diet"
-                name="diet"
-                value={formData.diet}
-                onChange={handleChange}
-                required
-            >
-                <option value="heavy">Heavy(Daily)</option>
-                <option value="moderate">Moderate (A few times a week)</option>
-                <option value="light">Light (Occasionally)</option>
-                <option value="vegan">Vegetarian/Vegan</option>
-
-            </select>
-
-            <button onClick={calculateCarbon}>Calculate Carbon Footprint</button>
-
-            <div>
-                <h3>Monthly Carbon Footprint Results (lbs CO2):</h3>
-                <span>{results.poundsCarbon} tons CO2</span>
-                <p>Electricity: {results.electricityCarbon}</p>
-                <p>Gas: {results.gasCarbon}</p>
-                <p>Driving: {results.drivingCarbon}</p>
-                <p>Flights: {results.flightCarbon}</p>
-                <p>Diet: {results.dietCarbon}</p>
-                <p>Monthly Total: {results.monthlyCarbon} lbs CO2</p>
-                <p>Annual Total: {results.annualCarbon} lbs CO2</p>
-            </div>
-
-
         </>
     )
 }

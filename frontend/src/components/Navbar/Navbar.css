@@ -29,3 +29,7 @@
 .navbar .home-button-nav.active {
     color: #D2f898;
 }
+
+.home-button-nav {
+    font-family: 'Inter', sans-serif;
+}

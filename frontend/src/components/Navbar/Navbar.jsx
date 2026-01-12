@@ -24,7 +24,14 @@ export default function Navbar() {
                 Energy Tracker
                 </NavLink>
             </div>
+
             <div className = "nav-five">
+                <NavLink to="/booking" className="home-button-nav">
+                Booking
+                </NavLink>
+            </div>
+
+            <div className = "nav-six">
                 <NavLink to="/login" className="home-button-nav">
                 Login
                 </NavLink>

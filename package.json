@@ -1,0 +1,9 @@
+{
+  "name": "rolsa-osp",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && python server.py",
+    "install:frontend": "cd frontend && npm install"
+  }
+}

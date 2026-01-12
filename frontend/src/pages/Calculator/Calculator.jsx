@@ -12,7 +12,6 @@ function Calculator(){
     });
     
     const [results, setResults] = useState(null);
-    const [viewMode, setViewMode] = useState('monthly');
     
     function handleChange(event){
         setFormData({...formData, [event.target.name]: event.target.value});
@@ -67,7 +66,7 @@ function Calculator(){
                         <label htmlFor="input-title">Monthly Electricity Usage (kWh):</label>
                         <div className="input-form">
                             <input
-                                type="text"
+                                type="number"
                                 placeholder="Enter a number"
                                 id="electricity"
                                 name="electricity"
@@ -79,7 +78,7 @@ function Calculator(){
                         <label htmlFor="input-title">Monthly gas usage (Therms):</label>
                         <div className="input-form">
                             <input
-                                type="text"
+                                type="number"
                                 placeholder="Enter a number"
                                 id="gas"
                                 name="gas"
@@ -91,7 +90,7 @@ function Calculator(){
                         <label htmlFor="input-title">Miles driven per month:</label>
                         <div className="input-form">
                             <input
-                                type="text"
+                                type="number"
                                 placeholder="Enter a number"
                                 id="miles"
                                 name="miles"
@@ -103,7 +102,7 @@ function Calculator(){
                         <label htmlFor="input-title">Number of flights per year:</label>
                         <div className="input-form">
                             <input
-                                type="text"
+                                type="number"
                                 placeholder="Enter a number"
                                 id="flights"
                                 name="flights"

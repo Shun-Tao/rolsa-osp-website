@@ -8,7 +8,7 @@ import Booking from "./pages/Booking/Booking.jsx"
 import Settings from "./pages/Settings/Settings.jsx"
 import Profile from "./pages/Profile/Profile.jsx"
 import Login from "./pages/Login/Login.jsx"
-
+import Register from "./pages/Register/Register.jsx"
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
         <Route path= "/settings" element ={<Settings/>}/>
         <Route path= "/profile" element ={<Profile/>}/>
         <Route path= "/login" element ={<Login/>}/>
+        <Route path= "/register" element = {<Register/>}/>
     </Routes>
   )
 }

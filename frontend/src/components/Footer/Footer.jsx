@@ -1,7 +1,7 @@
 function Footer() {
     return (
         <footer>
-            <p>&copy; 2024 Green Energy</p>
+            <p>Footer</p>
         </footer>
     );
 }

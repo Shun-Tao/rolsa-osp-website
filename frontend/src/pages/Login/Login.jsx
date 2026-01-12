@@ -4,12 +4,15 @@ import './Login.css';
 function Login(){
     return(
         <>
-            <Navbar/>
             <div className="background-page">
                 <div className="login-page">
-                    <div className="login-form-inner">
-                    
+                    <Navbar/>
+                    <p className="login-title">Sign In</p>
+                    <div className="login-form">
+                        <div className="login-inner">
+                            <div className="Login-title"> </div>
 
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,76 @@
+.register-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #1d1b20;
+    margin-bottom: 20px;
+    margin-top: 200px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+.register-page {
+    background-color: #ffffff;
+    width: 97%;
+    padding: 0; 
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.register-form {
+    background-color: #A9CB75;
+    border: 2px solid #8fb85f;
+    border-radius: 20px;
+    text-align: center;
+    margin: 20px auto 60px auto;
+    max-width: 600px;
+}
+
+.register-inner{
+    background-color: #D2F898;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.register-input {
+    margin: 10px 20px 5px 20px;
+    text-align: left;
+    color: #1d1b20;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.input-account input {
+    width: calc(100% - 40px);
+    margin: 10px 20px;
+    padding: 16px;
+    border: 1px solid #8fb85f;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.register-inner button {
+    width: calc(100% - 40px);
+    margin: 20px 20px 10px 20px;
+    padding: 16px;
+    background-color: #8fb85f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login{
+    text-align:center;
+    font-family: 'Inter', sans-serif;
+}
+

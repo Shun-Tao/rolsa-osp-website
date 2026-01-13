@@ -12,12 +12,31 @@ function Calculator(){
     });
     
     const [results, setResults] = useState(null);
+    const [errors, setErrors] = useState(null)
     
-    function handleChange(event){
-        setFormData({...formData, [event.target.name]: event.target.value});
+function handleChange(event) {
+    const { name, value } = event.target;
+
+    if (value === '') {
+        setFormData({ ...formData, [name]: '' });
+        return;
     }
 
+    if (Number(value) < 0) return;
+
+    setFormData({
+        ...formData,
+        [name]: value
+    });
+}
+
+
     const calculateCarbon = () => {
+        const {electricity,gas,miles,flights,diet} = formData;
+
+        
+
+
         const electricityCarbon = formData.electricity * 0.92;
         const gasCarbon = formData.gas * 11.7;
         const drivingCarbon = formData.miles * 0.89;
@@ -70,6 +89,8 @@ function Calculator(){
                                 placeholder="Enter a number"
                                 id="electricity"
                                 name="electricity"
+                                min="0"
+                                step="any"
                                 value={formData.electricity}
                                 onChange={handleChange}
                             />
@@ -82,6 +103,8 @@ function Calculator(){
                                 placeholder="Enter a number"
                                 id="gas"
                                 name="gas"
+                                min="0"
+                                step="any"
                                 value={formData.gas}
                                 onChange={handleChange}
                             />
@@ -94,6 +117,8 @@ function Calculator(){
                                 placeholder="Enter a number"
                                 id="miles"
                                 name="miles"
+                                min="0"
+                                step="any"
                                 value={formData.miles}
                                 onChange={handleChange}
                             />
@@ -106,6 +131,8 @@ function Calculator(){
                                 placeholder="Enter a number"
                                 id="flights"
                                 name="flights"
+                                min="0"
+                                step="any"
                                 value={formData.flights}
                                 onChange={handleChange}
                             />

@@ -20,13 +20,13 @@ function Register(){
             <div className="background-page">
                 <div className="register-page">
                     <Navbar/>
-                    <p className="register-title">Sign In</p>
+                    <p className="register-title">Sign Up</p>
 
                     <div className="register-form">
                         <div className="register-inner">
 
-                            <div className="Login-title">Username: </div>
-                            <div className="input-form">
+                            <div className="register-input">Username: </div>
+                            <div className="input-account">
                                 <input
                                     type="text"
                                     placeholder="John Doe"
@@ -37,8 +37,19 @@ function Register(){
                                 />
                             </div>
 
-                            <div className="register-title">Email: </div>
-                            <div className="input-form">
+                            <div className="register-input">Phone number: </div>
+                            <div className="input-account">
+                                <input
+                                    type="text"
+                                    placeholder="07XXX XXXXXX"
+                                    id="telephone"
+                                    name="telephone"
+                                    value={registerData.telephone}
+                                    onChange={handleChange}
+                                />
+                            </div>
+                            <div className="register-input">Email: </div>
+                            <div className="input-account">
                                 <input
                                     type="text"
                                     placeholder="example@gmail.com"
@@ -49,8 +60,8 @@ function Register(){
                                 />
                             </div>
 
-                            <div className="register-title">Password: </div>
-                            <div className="input-form">
+                            <div className="register-input">Password: </div>
+                            <div className="input-account">
                                 <input
                                     type="text"
                                     placeholder="********"
@@ -61,8 +72,8 @@ function Register(){
                                 />
                             </div>
 
-                            <div className="register-title">Confirm Password: </div>
-                            <div className="input-form">
+                            <div className="register-input">Confirm Password: </div>
+                            <div className="input-account">
                                 <input
                                     type="text"
                                     placeholder="********"
@@ -72,10 +83,13 @@ function Register(){
                                     onChange={handleChange}
                                 />
                             </div>
+
+                            <button>Register Account</button>
+
+                            <p className = 'login'>Already have an account? <Link to="/login" className="login-link">Sign in</Link></p>
                         </div>
                     </div>
 
-                <p className = 'login'>Already have an account?<Link to="/login" className="login-link">Sign in</Link></p>
 
                 </div>
             </div>

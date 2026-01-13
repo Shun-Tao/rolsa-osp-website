@@ -26,8 +26,8 @@ function Login(){
                         <div className="login-inner">
 
 
-                            <div className="Login-title">Email: </div>
-                            <div className="input-form">
+                            <div className="login-input">Email: </div>
+                            <div className="input-account">
                                 <input
                                     type="text"
                                     placeholder="example@gmail.com"
@@ -38,21 +38,25 @@ function Login(){
                                 />
                             </div>
 
-                            <div className="Login-title">Password: </div>
-                            <div className="input-form">
+                            <div className="login-input">Password: </div>
+                            <div className="input-account">
                                 <input
                                     type="text"
                                     placeholder="********"
                                     id="password"
                                     name="password"
-                                    value={loginData.username}
+                                    value={loginData.password}
                                     onChange={handleChange}
                                 />
                             </div>
+
+                        <button>Sign In</button>
+
+                        <p className = 'signup'>Don't have an account? <Link to="/register" className="signup-link">Register</Link></p>
+
                         </div>
                     </div>
 
-                <p className = 'signup'>Don't have an account? <Link to="/register" className="signup-link">Sign Up</Link></p>
 
                 </div>
             </div>
